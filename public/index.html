@@ -20,13 +20,9 @@
             console.log('Desconectado del servidor');
         });
 
-        socket.emit('message', {
-            name: 'Fernando',
-            message: 'Hola mundo'
-        });
-
-        socket.on('message', (payload) => {
-            console.log('Mensaje recibido:', payload);
+        socket.on('active-bands', (payload) => {
+            console.clear();
+            console.table(payload);
         });
     </script>
 </body>
