@@ -19,11 +19,6 @@
         socket.on('disconnect', () => {
             console.log('Desconectado del servidor');
         });
-
-        socket.on('active-bands', (payload) => {
-            console.clear();
-            console.table(payload);
-        });
     </script>
 </body>
 </html>
