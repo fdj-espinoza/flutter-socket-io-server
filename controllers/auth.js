@@ -77,7 +77,6 @@ const renewToken = async (req, res = response) => {
     const usuarioDB = await Usuario.findById(uid);
     res.json({
         ok: true,
-        usuario: usuarioDB,
         token: token
     });
 }
